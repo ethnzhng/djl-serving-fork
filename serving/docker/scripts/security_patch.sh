@@ -6,7 +6,7 @@ apt-get update
 
 if [[ "$IMAGE_NAME" == "lmi" ]] ||
   [[ "$IMAGE_NAME" == "pytorch-gpu" ]]; then
-  apt-get upgrade -y dpkg openssl curl libssl3
+  apt-get upgrade -y dpkg openssl curl libssl3 libpmix2
 elif [[ "$IMAGE_NAME" == "cpu" ]]; then
   apt-get upgrade -y libpcre2-8-0 libdbus-1-3 curl
 elif [[ "$IMAGE_NAME" == "trtllm" ]]; then
